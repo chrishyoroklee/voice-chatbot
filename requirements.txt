@@ -1,0 +1,7 @@
+langchain
+streamlit
+openai
+docarray
+langchain-community
+pypdf
+tiktoken
