@@ -37,7 +37,7 @@ def load_db(file_path, chain_type, k, openai_api_key):
 
 # Streamlit App
 def main():
-    st.title("ChatWithYourData_Bot")
+    st.title("the voice chatbot")
 
     # Sidebar for API key input
     with st.sidebar:
