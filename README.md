@@ -1,10 +1,9 @@
 # the-voice-chatbot 
-the-voice-chatbot is a Streamlit-based web application that allows users to interact with their PDF documents using natural language. Powered by LangChain and OpenAI, this enables users to use their own PDFs to interact and have conversations.
+the-voice-chatbot is a Streamlit-based web application that allows users to chat with a virtual voice teacher. Powered by LangChain and OpenAI, this enables users to talk to a virtual voice teacher that has been trained with voice-specific resources.
 
 ## Features
 
-- **PDF Upload**: Upload any PDF document for processing.
-- **Natural Language Queries**: Ask questions about the content of the PDF.
+- **Natural Language Queries**: Ask questions about voice and vocal training.
 - **Chat History**: Maintains a conversation history for context-aware responses.
 - **Source Documents**: Displays the sections of the PDF used to generate answers.
 - **OpenAI Integration**: Uses OpenAI's GPT models for generating responses.
