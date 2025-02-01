@@ -50,8 +50,8 @@ def main():
         st.warning("Please enter your OpenAI API key to proceed.")
         return
 
-    # File uploader
-    uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
+    # # File uploader
+    # uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
 
     # Initialize session state for chat history and QA chain
     if "chat_history" not in st.session_state:
@@ -60,18 +60,19 @@ def main():
         st.session_state.qa = None
 
     # Load PDF and initialize QA chain
-    if uploaded_file is not None:
-        with st.spinner("Processing PDF..."):
-            # Save the uploaded file temporarily
-            with open("temp.pdf", "wb") as f:
-                f.write(uploaded_file.getbuffer())
+    st.session_state.qa = load_db("functional-unity-of-the-singing-voice.pdf", "stuff", 5, openai_api_key)
+    # if uploaded_file is not None:
+    #     with st.spinner("Processing PDF..."):
+    #         # Save the uploaded file temporarily
+    #         with open("temp.pdf", "wb") as f:
+    #             f.write(uploaded_file.getbuffer())
 
-            # Load and process the PDF
-            st.session_state.qa = load_db("temp.pdf", "stuff", 4, openai_api_key)
-            st.success("PDF processed and ready for queries!")
+    #         # Load and process the PDF
+    #         st.session_state.qa = load_db("temp.pdf", "stuff", 4, openai_api_key)
+    #         st.success("PDF processed and ready for queries!")
 
     # Chat interface
-    st.header("Chat with your PDF")
+    st.header("Chat with your voice teacher")
     user_query = st.text_input("Enter your question:")
 
     if user_query and st.session_state.qa:
